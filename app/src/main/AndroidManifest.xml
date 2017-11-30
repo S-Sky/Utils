@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.administrator.utils">
+
+    <!--允许应用程序改变网络状态-->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!--允许应用程序改变WIFI连接状态-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!--允许应用程序访问有关的网络信息-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--允许应用程序访问WIFI网卡的网络信息-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--允许应用程序完全使用网络-->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Required -->
+    <permission
+        android:name="com.example.administrator.utils.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+    <!-- Required  一些系统要求的权限，如访问网络等-->
+    <uses-permission android:name="com.example.administrator.utils.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- ping++支付 所需要的通用权限在极光推送所需的权限中都有,此时不用重复添加-->
+
+    <application
+        android:name=".jpush.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/timg"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".TimeChangeActivity" />
+        <activity android:name=".CapturingPhotosActivity" />
+        <activity android:name=".MyListViewActivity" />
+        <activity android:name=".notification.NotificationActivity" />
+        <activity android:name=".pingandand.ClientSDKActivity" />
+        <activity android:name=".mycar.MyCarActivity" />
+        <activity android:name=".scrollViewAndGridView.ScrollAndGridActivity" />
+        <activity android:name=".waitAnimation.RunningManActivity" />
+        <activity android:name=".waitAnimation.FiveDialogActivity" />
+        <activity android:name=".myDialog.MyDialogActivity" />
+        <activity android:name=".translucentBar.MyTranslucentBarActivity" />
+        <activity
+            android:name=".translucentBar.ImageTranslucentBarActivity"
+            android:theme="@style/ImageTranslucentTheme" />
+
+        <activity
+            android:name=".translucentBar.ColorTranslucentBarActivity"
+            android:theme="@style/ColorTranslucentTheme" />
+        <activity android:name=".myRecycler.MyRecycler" />
+        <activity
+            android:name=".myRecycler.LineActivity"
+            android:label="@string/title_activity_line"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".myRecycler.LineActivity2"
+            android:label="滑动显示隐藏布局"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".myRecycler.GridActivity"
+            android:label="网格布局"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".myRecycler.StaggeredActivity"
+            android:label="@string/title_activity_staggerde"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".rotary_table.RotaryTableActivity" />
+        <activity android:name=".custom_views.activity.MyActivity" />
+        <activity android:name=".demo_music.MActivity" />
+        <activity android:name=".testAnimation.TestActivity" />
+        <activity android:name=".testAnimation.ZhenDongHuaActivity" />
+        <activity android:name=".testAnimation.BuJianDongHuaActivity" />
+        <activity android:name=".testAnimation.ShuXingActivity" />
+        <activity android:name=".testViewPager.MyViewPager" />
+        <activity android:name=".testHandle.TestHandle" />
+        <activity android:name=".testBroadcastReceiver.MyReceiverActivity" />
+        <activity android:name=".notification.TestNotificationActivity" />
+        <activity android:name=".notification.TestTargetActivity" />
+        <activity android:name=".testService.ServiceActivity" />
+        <activity android:name=".testService.HttpServiceActivity" />
+        <activity android:name=".testService.MyIntentServiceActivity" />
+        <activity android:name=".testService.BindServiceActivity" />
+        <activity android:name=".testService.BindService2Activity" />
+        <activity android:name=".custom_views.activity.MyView_listActivity" />
+        <activity android:name=".custom_views.activity.MyActivity1" />
+        <activity android:name=".socket_test.TcpActivity" />
+
+        <service android:name=".notification.NotificationService">
+            <intent-filter>
+                <action android:name="ymw.MY_SERVICE" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".testService.FirstService" />
+        <service android:name=".testService.DownService" />
+        <service android:name=".testService.IntentDownService" />
+        <service android:name=".testService.BindService" />
+        <service android:name=".testService.BindService2" />
+
+        <!--静态注册广播接收器-->
+        <!-- <receiver android:name=".testBroadcastReceiver.MyReceiver">
+             &lt;!&ndash;意图过滤器  priority  设置优先级&ndash;&gt;
+             <intent-filter android:priority="100">
+                 <action android:name="receiver" />
+             </intent-filter>
+         </receiver>
+         <receiver android:name=".testBroadcastReceiver.Receiver02">
+             &lt;!&ndash;意图过滤器&ndash;&gt;
+             <intent-filter android:priority="200">
+                 <action android:name="receiver" />
+             </intent-filter>
+         </receiver>-->
+
+        <!--接受广播-->
+        <receiver
+            android:name=".jpush.MyReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <!-- Required 用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!-- Required 用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!-- Required 用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!-- Required 用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+
+                <category android:name="com.example.administrator.utils" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Ping++ sdk -->
+        <activity
+            android:name="com.pingplusplus.android.PaymentActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 微信支付 sdk ，也是 Ping++ sdk 调用入口 -->
+        <activity-alias
+            android:name="com.example.administrator.utils.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:targetActivity="com.pingplusplus.android.PaymentActivity" />
+        <!-- 支付宝 sdk -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+
+        <!-- 壹收款 -->
+        <activity
+            android:name="com.pingplusplus.libone.PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.pingplusplus.libone.PaySuccessActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize" />
+    </application>
+</manifest>

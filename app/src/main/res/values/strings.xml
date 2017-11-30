@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Utils</string>
+    <string name="title_activity_line">线性布局</string>
+    <string name="title_activity_grid">网格布局</string>
+    <string name="title_activity_staggerde">交错网格布局</string>
+
+    <string-array name="tabs">
+        <item>军事</item>
+        <item>娱乐</item>
+        <item>财经</item>
+        <item>社会</item>
+        <item>新闻</item>
+    </string-array>
+</resources>

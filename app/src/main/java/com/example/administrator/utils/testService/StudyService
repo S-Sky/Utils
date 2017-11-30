@@ -1,0 +1,28 @@
+Service的概念及作用
+1、概念: 长期在后台运行的没有界面的四大组件之一
+2、作用: 执行耗时操作等
+
+Service的分类
+1、Started Service //开启service
+2、Bound Service //绑定service开启service
+
+Service 生命周期
+Started Service
+Call to startService --> onCreate() --> onStartCommand() --> Service running --> onDestroy  --> Service shut down
+
+Service 用法
+1、写一个类继承Service
+2、复写相关生命周期方法
+3、注册Service
+4、开启Service
+
+IntentService 的用法 直接使用,耗时操作不用开线程
+
+Bound Service 生命周期
+Call to bindService  --> onCreate() --> onBind() --> Clients are bound to service --> onUnbind() --> onDestroy() --> Service shut down
+
+
+AIDL实现IPC(IPC进程间通信)
+利用服务实现IPC
+AIDL: Android Interface definition language: Android接口定义语言。
+IPC:  Inter-Process Communication   进程间通信

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:drawable="@drawable/knockout_0"
+        android:duration="20" />
+    <item
+        android:drawable="@drawable/knockout_1"
+        android:duration="20" />
+    <item
+        android:drawable="@drawable/knockout_2"
+        android:duration="20" />
+    <item
+        android:drawable="@drawable/knockout_3"
+        android:duration="20" />
+    <item
+        android:drawable="@drawable/knockout_4"
+        android:duration="20" />
+    <item
+        android:drawable="@drawable/knockout_5"
+        android:duration="20" />
+    <item
+        android:drawable="@drawable/knockout_6"
+        android:duration="20" />
+    <item
+        android:drawable="@drawable/knockout_7"
+        android:duration="20" />
+    <item
+        android:drawable="@drawable/knockout_8"
+        android:duration="20" />
+    <item
+        android:drawable="@drawable/knockout_9"
+        android:duration="20" />
+
+</animation-list>
