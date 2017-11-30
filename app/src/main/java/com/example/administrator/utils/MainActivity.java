@@ -28,9 +28,6 @@ import com.example.administrator.utils.waitAnimation.RunningManActivity;
 
 import java.io.File;
 
-/**
- * 更新
- */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView time_change;
